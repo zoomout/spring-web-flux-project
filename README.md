@@ -4,7 +4,7 @@
 ```
 ./gradlew test
 ```
-# To build jars
+## To build jars
 ```
 ./gradlew assemble
 ```
