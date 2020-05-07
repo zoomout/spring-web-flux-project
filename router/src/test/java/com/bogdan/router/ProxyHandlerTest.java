@@ -11,7 +11,7 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 
 import java.io.IOException;
 
-public class HandlerTest {
+public class ProxyHandlerTest {
 
     private static Router router;
     private static ProxyHandler proxyHandler;
@@ -50,18 +50,18 @@ public class HandlerTest {
         Assert.assertEquals("/backend", recordedRequest.getPath());
     }
 
-}
+    static class TestUrlResolver extends UrlResolver {
 
-class TestUrlResolver extends UrlResolver {
+        private String url;
 
-    private String url;
+        TestUrlResolver(String url) {
+            this.url = url;
+        }
 
-    TestUrlResolver(String url) {
-        this.url = url;
+        @Override
+        public String resolveUrl() {
+            return url;
+        }
     }
 
-    @Override
-    public String resolveUrl() {
-        return url;
-    }
 }
