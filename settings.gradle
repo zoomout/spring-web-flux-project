@@ -1,0 +1,3 @@
+rootProject.name = 'spring-web-flux-project'
+include 'backend'
+include 'router'
