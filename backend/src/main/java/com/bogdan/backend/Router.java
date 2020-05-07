@@ -12,8 +12,6 @@ public class Router {
 
     @Bean
     public RouterFunction<ServerResponse> routeBackend(BackendHandler handler) {
-        return RouterFunctions
-                .route(RequestPredicates.path("/backend"), handler::handleRoute);
+        return RouterFunctions.route(RequestPredicates.path("/backend"), handler::handleRoute);
     }
-
 }
