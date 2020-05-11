@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 public class BackendHandlerTest {
-
     private Router router = new Router();
     private BackendHandler backendHandler;
 
