@@ -1,4 +1,4 @@
-package com.bogdan.router;
+package com.bogdan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
